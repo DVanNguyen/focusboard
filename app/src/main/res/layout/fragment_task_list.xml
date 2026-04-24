@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface"
+    android:orientation="vertical">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/spacing_24"
+        android:paddingTop="@dimen/spacing_24"
+        android:paddingEnd="@dimen/spacing_24"
+        android:paddingBottom="@dimen/spacing_8">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_6"
+            android:fontFamily="sans-serif-medium"
+            android:text="Manage your tasks"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="@string/title_tasks"
+            android:textColor="@color/on_surface"
+            android:textSize="@dimen/text_size_display" />
+    </LinearLayout>
+
+    <!-- Filter Chips -->
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/spacing_16"
+        android:paddingEnd="@dimen/spacing_16"
+        android:paddingBottom="@dimen/spacing_8"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/filter_all"
+            android:textColor="@color/on_surface"
+            android:textSize="@dimen/text_size_small"
+            app:chipBackgroundColor="@color/primary"
+            app:chipStrokeColor="@color/primary" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipIncomplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/filter_incomplete"
+            android:textColor="@color/on_surface_variant"
+            android:textSize="@dimen/text_size_small"
+            app:chipBackgroundColor="@color/surface_container_high"
+            app:chipStrokeColor="@color/outline"
+            app:chipStrokeWidth="1dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipCompleted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/filter_completed"
+            android:textColor="@color/on_surface_variant"
+            android:textSize="@dimen/text_size_small"
+            app:chipBackgroundColor="@color/surface_container_high"
+            app:chipStrokeColor="@color/outline"
+            app:chipStrokeWidth="1dp" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <!-- Task List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/spacing_12"
+        android:paddingEnd="@dimen/spacing_12"
+        android:paddingBottom="@dimen/spacing_16" />
+
+    <!-- Empty State -->
+    <LinearLayout
+        android:id="@+id/emptyGroup"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/ic_empty_tasks"
+            app:tint="@color/on_surface_variant" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_16"
+            android:fontFamily="sans-serif"
+            android:text="@string/empty_tasks"
+            android:textColor="@color/on_surface_variant"
+            android:textSize="@dimen/text_size_body" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_4"
+            android:fontFamily="sans-serif"
+            android:text="@string/empty_tasks_hint"
+            android:textColor="@color/on_surface_variant"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+</LinearLayout>

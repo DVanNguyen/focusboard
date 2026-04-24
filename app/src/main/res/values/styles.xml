@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ============================== -->
+    <!--  TEXT APPEARANCES               -->
+    <!-- ============================== -->
+
+    <!-- Serif (Lora-style) — ONLY for H1, H2 headings & Workspace names. Upright, NOT italic. -->
+    <style name="TextAppearance.FocusBoard.Display" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">serif</item>
+        <item name="android:textSize">@dimen/text_size_display</item>
+        <item name="android:textColor">@color/on_surface</item>
+    </style>
+
+    <style name="TextAppearance.FocusBoard.Headline" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">serif</item>
+        <item name="android:textSize">@dimen/text_size_headline</item>
+        <item name="android:textColor">@color/on_surface</item>
+    </style>
+
+    <style name="TextAppearance.FocusBoard.Title" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">serif</item>
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textColor">@color/on_surface</item>
+    </style>
+
+    <!-- Sans-serif (Inter-style) — for ALL other text -->
+    <style name="TextAppearance.FocusBoard.Body" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="android:textColor">@color/on_surface</item>
+    </style>
+
+    <style name="TextAppearance.FocusBoard.Label" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/on_surface_variant</item>
+    </style>
+
+    <style name="TextAppearance.FocusBoard.Label.Primary">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- ============================== -->
+    <!--  BUTTON STYLES                  -->
+    <!-- ============================== -->
+    <style name="Widget.FocusBoard.Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/on_primary</item>
+        <item name="cornerRadius">@dimen/radius_large</item>
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.FocusBoard.Button.Secondary" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/outline</item>
+        <item name="android:textColor">@color/on_surface</item>
+        <item name="cornerRadius">@dimen/radius_large</item>
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="fontFamily">sans-serif</item>
+    </style>
+
+    <style name="Widget.FocusBoard.Button.Error" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/error</item>
+        <item name="android:textColor">@color/on_error</item>
+        <item name="cornerRadius">@dimen/radius_large</item>
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- ============================== -->
+    <!--  CARD STYLES                    -->
+    <!-- ============================== -->
+    <style name="Widget.FocusBoard.Card.Glass" parent="">
+        <item name="cardElevation">0dp</item>
+        <item name="cardBackgroundColor">@color/surface_container_high</item>
+        <item name="cardCornerRadius">@dimen/radius_large</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <!-- ============================== -->
+    <!--  INPUT STYLES                   -->
+    <!-- ============================== -->
+    <style name="Widget.FocusBoard.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/surface_container_high</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_large</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_large</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_large</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radius_large</item>
+        <item name="boxStrokeColor">@color/outline</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="hintTextColor">@color/on_surface_variant</item>
+    </style>
+</resources>

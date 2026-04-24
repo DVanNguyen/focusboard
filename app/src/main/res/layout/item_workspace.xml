@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_12"
+    app:cardBackgroundColor="@color/surface_container_high"
+    app:cardCornerRadius="@dimen/radius_large"
+    app:cardElevation="0dp"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_16">
+
+        <!-- Icon -->
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/brand_background_rounded">
+
+            <TextView
+                android:id="@+id/icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="📁"
+                android:textSize="18sp" />
+        </FrameLayout>
+
+        <!-- Workspace Name (serif, upright — this is a workspace title) -->
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_12"
+            android:layout_weight="1"
+            android:fontFamily="serif"
+            android:textColor="@color/on_surface"
+            android:textSize="@dimen/text_size_title" />
+
+        <ImageView
+            android:layout_width="@dimen/icon_size_small"
+            android:layout_height="@dimen/icon_size_small"
+            android:contentDescription="Navigate"
+            app:srcCompat="@android:drawable/ic_media_play"
+            app:tint="@color/on_surface_variant" />
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

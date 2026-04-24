@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">FocusBoard</string>
+
+    <string name="menu_workspace">Workspace</string>
+    <string name="menu_tasks">Tasks</string>
+    <string name="menu_profile">Profile</string>
+
+    <string name="title_login">Đăng nhập</string>
+    <string name="title_register">Đăng ký</string>
+    <string name="hint_name">Tên</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Mật khẩu</string>
+    <string name="action_login">Đăng nhập</string>
+    <string name="action_register">Đăng ký</string>
+    <string name="action_go_register">Chưa có tài khoản? Đăng ký</string>
+    <string name="error_network">Lỗi mạng. Vui lòng thử lại.</string>
+    <string name="error_login_failed">Đăng nhập thất bại.</string>
+    <string name="error_register_failed">Đăng ký thất bại.</string>
+    <string name="action_add">Thêm</string>
+    <string name="hint_search_pages">Tìm kiếm page…</string>
+    <string name="empty_pages">Chưa có page nào. Nhấn "+" để tạo mới.</string>
+
+    <string name="action_add_text">Thêm Text</string>
+    <string name="action_add_todo">Thêm TODO</string>
+    <string name="hint_text">Nhập nội dung…</string>
+    <string name="hint_todo">Việc cần làm…</string>
+    <string name="hint_header">Tiêu đề…</string>
+
+    <string name="title_tasks">Tasks</string>
+    <string name="title_profile">Profile</string>
+    <string name="action_logout">Đăng xuất</string>
+    <string name="action_retry">Thử lại</string>
+
+    <!-- Task List -->
+    <string name="filter_all">Tất cả</string>
+    <string name="filter_incomplete">Chưa xong</string>
+    <string name="filter_completed">Hoàn thành</string>
+    <string name="empty_tasks">Chưa có task nào</string>
+    <string name="empty_tasks_hint">Tạo TODO block trong các page để theo dõi công việc</string>
+
+    <!-- Workspace List -->
+    <string name="empty_workspaces">Chưa có workspace nào.\nNhấn "+" để tạo mới.</string>
+</resources>

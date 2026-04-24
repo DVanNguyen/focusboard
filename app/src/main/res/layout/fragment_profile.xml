@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_24">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="@string/title_profile"
+            android:textColor="@color/on_surface"
+            android:textSize="@dimen/text_size_display"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_6"
+            android:fontFamily="sans-serif-medium"
+            android:text="Your account information"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <!-- Loading -->
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/primary"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subtitle" />
+
+        <!-- Content Group -->
+        <LinearLayout
+            android:id="@+id/contentGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_32"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subtitle">
+
+            <!-- Profile Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_bg_surface_container"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/spacing_24">
+
+                <!-- Avatar Circle -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    app:cardCornerRadius="32dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@color/primary"
+                    app:strokeWidth="2dp">
+
+                    <TextView
+                        android:id="@+id/avatarText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/surface_container_high"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:textColor="@color/primary"
+                        android:textSize="@dimen/text_size_headline"
+                        android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_16"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="serif"
+                        android:textColor="@color/on_surface"
+                        android:textSize="@dimen/text_size_headline" />
+
+                    <TextView
+                        android:id="@+id/userEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_4"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@color/on_surface_variant"
+                        android:textSize="@dimen/text_size_small" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Section: Account -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_32"
+                android:fontFamily="sans-serif-medium"
+                android:paddingStart="@dimen/spacing_4"
+                android:text="Account"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/text_size_small"
+                android:textStyle="bold" />
+
+            <!-- Logout Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logoutButton"
+                style="@style/Widget.FocusBoard.Button.Error"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/spacing_12"
+                android:text="@string/action_logout"
+                app:icon="@drawable/ic_logout"
+                app:iconGravity="textStart" />
+
+        </LinearLayout>
+
+        <!-- Error Group -->
+        <LinearLayout
+            android:id="@+id/errorGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subtitle">
+
+            <TextView
+                android:id="@+id/errorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/error"
+                android:textSize="@dimen/text_size_body" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/retryButton"
+                style="@style/Widget.FocusBoard.Button.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_8"
+                android:text="@string/action_retry" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

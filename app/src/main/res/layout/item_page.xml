@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_12"
+    app:cardBackgroundColor="@color/surface_container_high"
+    app:cardCornerRadius="@dimen/radius_large"
+    app:cardElevation="0dp"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_16">
+
+        <!-- Page Icon -->
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="📝"
+                android:textSize="20sp" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_12"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Page Title (serif, upright — this is a heading-level title) -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:textColor="@color/on_surface"
+                android:textSize="@dimen/text_size_title" />
+
+            <!-- Last updated (sans-serif) -->
+            <TextView
+                android:id="@+id/updated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_4"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/on_surface_variant"
+                android:textSize="@dimen/text_size_small" />
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

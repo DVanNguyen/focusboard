@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_32">
+
+        <!-- Branding Section -->
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="@dimen/spacing_24"
+            android:background="@drawable/brand_background_rounded"
+            android:elevation="8dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                app:srcCompat="@drawable/ic_workspace"
+                app:tint="@color/on_primary" />
+        </FrameLayout>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_6"
+            android:fontFamily="serif"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@color/on_surface"
+            android:textSize="@dimen/text_size_display" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_32"
+            android:fontFamily="sans-serif-medium"
+            android:text="Productivity Suite"
+            android:textAlignment="center"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="bold" />
+
+        <!-- Welcome Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_8"
+            android:fontFamily="serif"
+            android:text="@string/title_login"
+            android:textAlignment="center"
+            android:textColor="@color/on_surface"
+            android:textSize="@dimen/text_size_headline" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_32"
+            android:fontFamily="sans-serif"
+            android:text="Nhập thông tin để truy cập tài khoản"
+            android:textAlignment="center"
+            android:textColor="@color/on_surface_variant"
+            android:textSize="@dimen/text_size_small" />
+
+        <!-- Email Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailLayout"
+            style="@style/Widget.FocusBoard.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_16"
+            app:startIconDrawable="@android:drawable/sym_action_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailInput"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:fontFamily="sans-serif"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/on_surface"
+                android:textSize="@dimen/text_size_body" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordLayout"
+            style="@style/Widget.FocusBoard.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_24"
+            app:endIconMode="password_toggle"
+            app:startIconDrawable="@android:drawable/ic_lock_lock">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordInput"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:fontFamily="sans-serif"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword"
+                android:textColor="@color/on_surface"
+                android:textSize="@dimen/text_size_body" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Login Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginButton"
+            style="@style/Widget.FocusBoard.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginBottom="@dimen/spacing_16"
+            android:text="@string/action_login" />
+
+        <!-- Progress -->
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_8"
+            android:indeterminateTint="@color/primary"
+            android:visibility="gone" />
+
+        <!-- Error -->
+        <TextView
+            android:id="@+id/errorText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_8"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/error"
+            android:textSize="@dimen/text_size_body"
+            android:visibility="gone" />
+
+        <!-- Divider -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_24"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/outline" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_12"
+                android:layout_marginEnd="@dimen/spacing_12"
+                android:fontFamily="sans-serif-medium"
+                android:text="hoặc"
+                android:textColor="@color/on_surface_variant"
+                android:textSize="@dimen/text_size_small" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/outline" />
+        </LinearLayout>
+
+        <!-- Register Link -->
+        <TextView
+            android:id="@+id/registerLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/action_go_register"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/text_size_body" />
+
+    </LinearLayout>
+</ScrollView>
